@@ -1,0 +1,16 @@
+# Utiliza la imagen oficial de PostgreSQL 15.5 como base
+FROM postgres:15.5
+
+# Variables de entorno para el usuario y la contraseña
+ENV POSTGRES_USER=root
+ENV POSTGRES_PASSWORD=123456
+ENV POSTGRES_DB=ecommerce
+
+# Copia el script de inicialización a la carpeta /docker-entrypoint-initdb.d/
+COPY init.sql /docker-entrypoint-initdb.d/
+
+# Cambia el usuario por defecto de PostgreSQL
+USER postgres
+
+# Expone el puerto por defecto de PostgreSQL
+EXPOSE 5432
