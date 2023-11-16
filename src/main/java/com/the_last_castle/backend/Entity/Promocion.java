@@ -4,15 +4,13 @@ import java.util.Date;
 import java.util.UUID;
 
 import jakarta.persistence.*;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.TemporalType;
 
 @Entity
 @Table(name = "Pr_Promotion")
 public class Promocion {
     @Id
     @GeneratedValue(generator = "uuid2")
-    @Column(name = "id_promotion", columnDefinition = "BINARY(16)")
+    @Column(name = "id_promotion", unique = true, nullable = false, columnDefinition = "BINARY(16)")
     private UUID idPromotion;
 
     @Column(name = "Name_Promotion", length = 30)

@@ -10,7 +10,7 @@ import jakarta.persistence.*;
 public class Roles {
     @Id
     @GeneratedValue(generator = "uuid2")
-    @Column(name = "id_roles", unique = true, nullable = false)
+    @Column(name = "id_roles", unique = true, nullable = false, columnDefinition = "BINARY(16)")
     private UUID idRoles;
 
     @Column(name = "Roles", length = 50)

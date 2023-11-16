@@ -11,7 +11,7 @@ import jakarta.persistence.*;
 public class Descuento {
     @Id
     @GeneratedValue(generator = "uuid2")
-    @Column(name = "id_discount", unique = true, nullable = false)
+    @Column(name = "id_discount", unique = true, nullable = false, columnDefinition = "BINARY(16)")
     private UUID idDiscount;
 
     @Column(name = "discount", precision = 6, scale = 8)

@@ -9,7 +9,7 @@ import jakarta.persistence.*;
 public class Persona {
     @Id
     @GeneratedValue(generator = "uuid2")
-    @Column(name = "Id_person", unique = true, nullable = false)
+    @Column(name = "Id_person", unique = true, nullable = false, columnDefinition = "BINARY(16)")
     private UUID id;
     @Column(name = "people_name", unique = true, nullable = false)
     private String peopleName;

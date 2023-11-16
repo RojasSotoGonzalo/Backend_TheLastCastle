@@ -9,7 +9,7 @@ import jakarta.persistence.*;
 public class TipoDeProducto {
     @Id
     @GeneratedValue(generator = "uuid2")
-    @Column(name = "id_product_type", columnDefinition = "BINARY(16)")
+    @Column(name = "id_product_type", unique = true, nullable = false, columnDefinition = "BINARY(16)")
     private UUID idProductType;
 
     @Column(name = "kind_of_product", length = 30)

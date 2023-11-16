@@ -10,14 +10,14 @@ import jakarta.persistence.*;
 public class user {
     @Id
     @GeneratedValue(generator = "uuid2")
-    @Column(name = "id_user", unique = true, nullable = false)
+    @Column(name = "id_user", unique = true, nullable = false, columnDefinition = "BINARY(16)")
     private UUID idUser;
 
     @OneToOne
     @JoinColumn(name = "person_Id_person", referencedColumnName = "Id_person", nullable = false, unique = true)
     private Persona persona;
 
-    @ManyToMany(fetch = FetchType.EAGER, targetEntity = RoleEntity.class, cascade = CascadeType.PERSIST)
+    @ManyToMany(fetch = FetchType.EAGER, targetEntity = Roles.class, cascade = CascadeType.PERSIST)
     @JoinTable(name = "user_roles", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "role_id"))
     private Set<Roles> roles;
 

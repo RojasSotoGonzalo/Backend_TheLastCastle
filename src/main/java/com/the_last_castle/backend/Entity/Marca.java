@@ -9,7 +9,7 @@ import jakarta.persistence.*;
 public class Marca {
     @Id
     @GeneratedValue(generator = "uuid2")
-    @Column(name = "id_brand", columnDefinition = "BINARY(16)")
+    @Column(name = "id_brand", unique = true, nullable = false, columnDefinition = "BINARY(16)")
     private UUID idBrand;
 
     @Column(name = "brand", length = 50)

@@ -2,7 +2,7 @@
 --- Tablas de AArea de Auditoria
 -- Table: Aud_Login
 CREATE TABLE Aud_Login (
-    Login_Id UUID  NOT NULL,
+    Login_Id UUID  NOT NULL ,
     id_user UUID  NULL,
     Description varchar(50)  NULL,
     Status varchar(50)  NULL,
@@ -10,7 +10,7 @@ CREATE TABLE Aud_Login (
     tx_Date date  NULL,
     tx_User varchar(50)  NULL,
     tx_Host varchar(50)  NULL,
-    CONSTRAINT Aud_Login_pk PRIMARY KEY (Login_Id)
+    CONSTRAINT Aud_Login_pk PRIMARY KEY (Login_Id) 
 );
 
 -- Table: Aud_Person
