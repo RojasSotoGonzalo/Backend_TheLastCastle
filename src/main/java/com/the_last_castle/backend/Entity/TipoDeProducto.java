@@ -1,28 +1,27 @@
 package com.the_last_castle.backend.Entity;
 
-import java.util.Date;
-import java.util.UUID;
+import java.util.*;
 
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "Use_Roles")
-public class Roles {
+@Table(name = "Pr_kind_of_product")
+public class TipoDeProducto {
     @Id
     @GeneratedValue(generator = "uuid2")
-    @Column(name = "id_roles", unique = true, nullable = false)
-    private UUID idRoles;
+    @Column(name = "id_product_type", columnDefinition = "BINARY(16)")
+    private UUID idProductType;
 
-    @Column(name = "Roles", length = 50)
-    private String roles;
+    @Column(name = "kind_of_product", length = 30)
+    private String kindOfProduct;
 
-    @Column(name = "Status", length = 50)
+    @Column(name = "status", length = 30)
     private String status;
 
-    @Column(name = "Version", length = 50)
+    @Column(name = "version", length = 30)
     private String version;
 
-    @Column(name = "tx_Date")
+    @Column(name = "tx_date")
     @Temporal(TemporalType.DATE)
     private Date txDate;
 
