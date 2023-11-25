@@ -1,0 +1,102 @@
+### Invocar al Servidor en mi maquina: LocalHost
+### Inviar lista en generar
+GET http://localhost:8080/api/v1/categoria  
+
+### Crea 
+POST  http://localhost:8080/api/v1/categoria
+Content-Type: application/json
+
+{
+    "category": "Blu-ray/DVD"
+}
+### Crea 
+POST  http://localhost:8080/api/v1/categoria
+Content-Type: application/json
+
+{
+    "category": "Manga"
+}
+
+### Crea 
+POST  http://localhost:8080/api/v1/categoria
+Content-Type: application/json
+
+{
+    "category": "Figuras"
+}
+
+### Crea 
+POST  http://localhost:8080/api/v1/categoria
+Content-Type: application/json
+
+{
+    "category": "Coleccionables"
+}
+
+### Crea 
+POST  http://localhost:8080/api/v1/categoria
+Content-Type: application/json
+
+{
+    "category": "Ropa"
+}
+
+### Crea 
+POST  http://localhost:8080/api/v1/categoria
+Content-Type: application/json
+
+{
+    "category": "Accesorios"
+}
+
+### Crea 
+POST  http://localhost:8080/api/v1/categoria
+Content-Type: application/json
+
+{
+    "category": "Merchandising de Personajes"
+}
+
+### Crea 
+POST  http://localhost:8080/api/v1/categoria
+Content-Type: application/json
+
+{
+    "category": "Accesorios Tecnológicos"
+}
+
+### Crea 
+POST  http://localhost:8080/api/v1/categoria
+Content-Type: application/json
+
+{
+    "category": "Cosplay"
+}
+
+### Crea 
+POST  http://localhost:8080/api/v1/categoria
+Content-Type: application/json
+
+{
+    "category": "adc"
+}
+
+
+
+### Puede Ver  el contenido de  unico por id
+GET http://localhost:8080/api/v1/categoria/9d40dbe5-2925-4223-9fb0-723512d34d80
+Content-Type: application/json
+
+
+
+### Editar 
+PUT  http://localhost:8080/api/v1/categoria/9d40dbe5-2925-4223-9fb0-723512d34d80
+Content-Type: application/json
+
+{
+    "category": "Ropa naruto"
+}
+
+###Eliminar
+DELETE  http://localhost:8080/api/v1/categoria/9d40dbe5-2925-4223-9fb0-723512d34d80
+Content-Type: application/json

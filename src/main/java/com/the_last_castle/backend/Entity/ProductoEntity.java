@@ -76,6 +76,24 @@ public class ProductoEntity {
         this.kinds = kinds;
     }
 
+    public ProductoEntity(CategoriaEntity category, String name, BigDecimal price, Integer stock, String description,
+            String codeImage, Integer status, String version, Date transactionDate, String transactionUser,
+            String transactionHost, List<MarcaEntity> brands, List<TipoDeProductoEntity> kinds) {
+        this.category = category;
+        this.name = name;
+        this.price = price;
+        this.stock = stock;
+        this.description = description;
+        this.codeImage = codeImage;
+        this.status = status;
+        this.version = version;
+        this.transactionDate = transactionDate;
+        this.transactionUser = transactionUser;
+        this.transactionHost = transactionHost;
+        this.brands = brands;
+        this.kinds = kinds;
+    }
+
     public ProductoEntity() {
     }
 

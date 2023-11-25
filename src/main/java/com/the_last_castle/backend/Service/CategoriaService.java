@@ -76,4 +76,5 @@ public class CategoriaService {
     public void deleteCategoria(UUID id) {
         categoriaRepository.deleteById(id);
     }
+
 }

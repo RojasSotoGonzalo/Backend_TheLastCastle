@@ -1,0 +1,62 @@
+### Invocar al Servidor en mi maquina: LocalHost
+### Inviar lista en generar
+GET http://localhost:8080/api/v1/producto 
+### Crea 
+POST  http://localhost:8080/api/v1/producto 
+Content-Type: application/json
+
+{
+  "category": {
+    "idCategory": "567da908-db1b-406d-82f6-3901c9a0b756"
+  },
+  "name": "Camiseta Dragon Ball Z sig",
+  "price": 599.99,
+  "stock": 100,
+  "description": "La camiseta Dragon Ball captura la esencia épica y emocionante de la aclamada serie de anime. Confeccionada con tela de alta calidad, esta prenda ofrece comodidad y estilo para los fanáticos incondicionales de Dragon Ball.",
+  "codeImage": "https://firebasestorage.googleapis.com/v0/b/ecommercealmacen-3961e.appspot.com/o/Productos%2Fgoku.jpeg?alt=media&token=f93757ac-164e-4e97-8efd-d60c1e0f7c81",
+  "brands": [
+    {
+      "idBrand": "938511ca-bb4a-4162-84a0-048fea89337e"
+    },
+
+  ],
+  "kinds": [
+    {
+      "idProductOfKind": "b37073b7-9a52-48e2-a5e3-55cc8cafc4f9"
+    }
+  ]
+}
+### Puede Ver  el contenido de  unico por id
+GET http://localhost:8080/api/v1/producto/84ee0077-e60e-4a1c-9c36-4a6ac32c7b71
+Content-Type: application/json
+
+###Eliminar
+DELETE  http://localhost:8080/api/v1/producto/e479d086-6266-43ff-9eb4-8a4ba260cb91
+Content-Type: application/json
+### Editar 
+PUT  http://localhost:8080/api/v1/producto/84ee0077-e60e-4a1c-9c36-4a6ac32c7b71
+Content-Type: application/json
+
+{
+  "category": {
+    "idCategory": "567da908-db1b-406d-82f6-3901c9a0b756"
+  },
+  "name": "Camiseta sig",
+  "price": 599.99,
+  "stock": 100,
+  "description": "La camiseta Dragon Ball captura la esencia épica y emocionante de la aclamada serie de anime. Confeccionada con tela de alta calidad, esta prenda ofrece comodidad y estilo para los fanáticos incondicionales de Dragon Ball.",
+  "codeImage": "https://firebasestorage.googleapis.com/v0/b/ecommercealmacen-3961e.appspot.com/o/Productos%2Fgoku.jpeg?alt=media&token=f93757ac-164e-4e97-8efd-d60c1e0f7c81",
+  "brands": [
+    {
+      "idBrand": "938511ca-bb4a-4162-84a0-048fea89337e"
+    },
+    {
+      "idBrand": "938511ca-bb4a-4162-84a0-048fea89337e"
+    }
+  ],
+  "kinds": [
+    {
+      "idProductOfKind": "b37073b7-9a52-48e2-a5e3-55cc8cafc4f9"
+    }
+  ]
+}

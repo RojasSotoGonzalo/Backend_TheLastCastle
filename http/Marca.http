@@ -1,0 +1,58 @@
+### Invocar al Servidor en mi maquina: LocalHost
+### Inviar lista en generar
+GET http://localhost:8080/api/v1/marca  
+
+### Puede Ver  el contenido de  unico por id
+GET http://localhost:8080/api/v1/marca/938511ca-bb4a-4162-84a0-048fea89337e
+Content-Type: application/json
+
+### Crea 
+POST  http://localhost:8080/api/v1/marca
+Content-Type: application/json
+
+{
+    "brandName": "nendoroid-series",
+    "description": "Las Nendoroids son una serie de figuras coleccionables japonesas conocidas por su distintivo estilo (chibi) y su alta calidad en la fabricación. Creadas por Good Smile Company, las Nendoroids se han convertido en un fenómeno popular entre los entusiastas del anime y los coleccionistas de figuras.",
+    "codeImage": "https://firebasestorage.googleapis.com/v0/b/ecommercealmacen-3961e.appspot.com/o/Marcas%2Fnendoroid.png?alt=media&token=38560265-ba85-4f6a-965a-2dee8e793f74"
+}
+### Crea 
+POST  http://localhost:8080/api/v1/marca
+Content-Type: application/json
+
+{
+    "brandName": "Banpreso",
+    "description": "Banpresto, reconocida marca japonesa de figuras coleccionables, destaca por su excepcional calidad y fidelidad a los personajes de anime, manga y videojuegos. Sus figuras abarcan desde estáticas hasta dinámicas, capturando con precisión detalles y expresiones. La serie Banpresto Prize Figures es especialmente codiciada por su tamaño y detalle, a menudo distribuida como premio en máquinas de captura. ",
+    "codeImage": "https://firebasestorage.googleapis.com/v0/b/ecommercealmacen-3961e.appspot.com/o/Marcas%2Fbanpresto.png?alt=media&token=6df0542e-34ad-481c-bdc1-43a3ad0c8038"
+}
+### Crea 
+POST  http://localhost:8080/api/v1/marca
+Content-Type: application/json
+
+{
+    "brandName": "AnimeHeroes",
+    "description": "AnimeHeroes, una línea de productos que ha ganado reconocimiento en el ámbito de figuras coleccionables, ofrece a los aficionados del anime una experiencia única de coleccionismo. Sus figuras destacan por su calidad y detalle, capturando la esencia de los personajes de anime de manera auténtica.",
+    "codeImage": "https://firebasestorage.googleapis.com/v0/b/ecommercealmacen-3961e.appspot.com/o/Marcas%2Fanimeheroes.png?alt=media&token=9e04b7dd-9fa5-4085-ad4d-b7a78865e0c6"
+}
+### Crea 
+POST  http://localhost:8080/api/v1/marca
+Content-Type: application/json
+
+{
+    "brandName": "Funko",
+    "description": "Funko es una empresa estadounidense conocida por sus figuras de vinilo coleccionables, especialmente las populares (Pop! Vinyl). Estas figuras cabezonas, estilizadas y asequibles, representan una amplia gama de personajes de películas, programas de televisión, cómics y más. Funko se ha convertido en un líder en la fabricación de productos de cultura pop y entretenimiento, ofreciendo una variedad de líneas de productos que han ganado popularidad entre los coleccionistas y aficionados.",
+    "codeImage": "https://firebasestorage.googleapis.com/v0/b/ecommercealmacen-3961e.appspot.com/o/Marcas%2Ffunko.png?alt=media&token=ca303bd6-7938-4f49-b088-b92ec96e183c"
+}
+
+### Editar 
+PUT  http://localhost:8080/api/v1/marca/6003f50f-d711-4436-8ea5-8ef6c7aa33d2 
+Content-Type: application/json
+
+{
+    "brandName": "Funko",
+    "description": "Funko es una empresa estadounidense conocida por sus figuras de vinilo coleccionables, especialmente las populares (Pop! Vinyl). Estas figuras cabezonas, estilizadas y asequibles, representan una amplia gama de personajes de películas, programas de televisión, cómics y más. Funko se ha convertido en un líder en la fabricación de productos de cultura pop y entretenimiento, ofreciendo una variedad de líneas de productos que han ganado popularidad entre los coleccionistas y aficionados.",
+    "codeImage": "Ropa"
+}
+
+###Eliminar
+DELETE  http://localhost:8080/api/v1/marca/6003f50f-d711-4436-8ea5-8ef6c7aa33d2 
+Content-Type: application/json

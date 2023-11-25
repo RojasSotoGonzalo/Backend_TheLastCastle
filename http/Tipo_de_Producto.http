@@ -1,0 +1,27 @@
+### Invocar al Servidor en mi maquina: LocalHost
+### Inviar lista en generar
+GET http://localhost:8080/api/v1/tipodeproducto  
+
+### Puede Ver  el contenido de  unico por id
+GET http://localhost:8080/api/v1/tipodeproducto/0ebc65f8-0582-4dec-9c19-be46a93d743c
+Content-Type: application/json
+
+### Crea 
+POST  http://localhost:8080/api/v1/tipodeproducto 
+Content-Type: application/json
+
+{
+    "kindOfProduct": "Ropa "
+}
+
+### Editar 
+PUT  http://localhost:8080/api/v1/tipodeproducto/6003f50f-d711-4436-8ea5-8ef6c7aa33d2 
+Content-Type: application/json
+
+{
+    "kindOfProduct": "Ropa naruto"
+}
+
+###Eliminar
+DELETE  http://localhost:8080/api/v1/tipodeproducto/6003f50f-d711-4436-8ea5-8ef6c7aa33d2 
+Content-Type: application/json

@@ -1,7 +1,7 @@
 package com.the_last_castle.backend.DTO;
 
 import java.math.BigDecimal;
-import java.util.Set;
+import java.util.List;
 import java.util.UUID;
 
 public class ProductoDTO {
@@ -12,11 +12,12 @@ public class ProductoDTO {
     private Integer stock;
     private String description;
     private String codeImage;
-    private Set<MarcaDTO> brands;
-    private Set<TipoDeProductoDTO> kinds;
+    private List<MarcaDTO> brands;
+    private List<TipoDeProductoDTO> kinds;
 
-    public ProductoDTO(CategoriaDTO category, String name, BigDecimal price, Integer stock, String description,
-            String codeImage, Set<MarcaDTO> brands, Set<TipoDeProductoDTO> kinds) {
+    public ProductoDTO(UUID idProduct, CategoriaDTO category, String name, BigDecimal price, Integer stock,
+            String description, String codeImage, List<MarcaDTO> brands, List<TipoDeProductoDTO> kinds) {
+        this.idProduct = idProduct;
         this.category = category;
         this.name = name;
         this.price = price;
@@ -27,9 +28,8 @@ public class ProductoDTO {
         this.kinds = kinds;
     }
 
-    public ProductoDTO(UUID idProduct, CategoriaDTO category, String name, BigDecimal price, Integer stock,
-            String description, String codeImage, Set<MarcaDTO> brands, Set<TipoDeProductoDTO> kinds) {
-        this.idProduct = idProduct;
+    public ProductoDTO(CategoriaDTO category, String name, BigDecimal price, Integer stock, String description,
+            String codeImage, List<MarcaDTO> brands, List<TipoDeProductoDTO> kinds) {
         this.category = category;
         this.name = name;
         this.price = price;
@@ -99,19 +99,19 @@ public class ProductoDTO {
         this.codeImage = codeImage;
     }
 
-    public Set<MarcaDTO> getBrands() {
+    public List<MarcaDTO> getBrands() {
         return brands;
     }
 
-    public void setBrands(Set<MarcaDTO> brands) {
+    public void setBrands(List<MarcaDTO> brands) {
         this.brands = brands;
     }
 
-    public Set<TipoDeProductoDTO> getKinds() {
+    public List<TipoDeProductoDTO> getKinds() {
         return kinds;
     }
 
-    public void setKinds(Set<TipoDeProductoDTO> kinds) {
+    public void setKinds(List<TipoDeProductoDTO> kinds) {
         this.kinds = kinds;
     }
 
@@ -121,5 +121,4 @@ public class ProductoDTO {
                 + ", stock=" + stock + ", description=" + description + ", codeImage=" + codeImage + ", brands="
                 + brands + ", kinds=" + kinds + "]";
     }
-
 }
