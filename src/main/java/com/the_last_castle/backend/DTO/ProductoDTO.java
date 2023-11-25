@@ -1,8 +1,7 @@
-package com.TheLastCastle.Producto.Dto;
+package com.the_last_castle.backend.DTO;
 
 import java.math.BigDecimal;
-import java.util.Arrays;
-import java.util.List;
+import java.util.Set;
 import java.util.UUID;
 
 public class ProductoDTO {
@@ -12,12 +11,12 @@ public class ProductoDTO {
     private BigDecimal price;
     private Integer stock;
     private String description;
-    private byte[] codeImage;
-    private List<MarcaDTO> brands;
-    private List<TipoDeProductoDTO> kinds;
+    private String codeImage;
+    private Set<MarcaDTO> brands;
+    private Set<TipoDeProductoDTO> kinds;
 
     public ProductoDTO(CategoriaDTO category, String name, BigDecimal price, Integer stock, String description,
-            byte[] codeImage, List<MarcaDTO> brands, List<TipoDeProductoDTO> kinds) {
+            String codeImage, Set<MarcaDTO> brands, Set<TipoDeProductoDTO> kinds) {
         this.category = category;
         this.name = name;
         this.price = price;
@@ -29,7 +28,7 @@ public class ProductoDTO {
     }
 
     public ProductoDTO(UUID idProduct, CategoriaDTO category, String name, BigDecimal price, Integer stock,
-            String description, byte[] codeImage, List<MarcaDTO> brands, List<TipoDeProductoDTO> kinds) {
+            String description, String codeImage, Set<MarcaDTO> brands, Set<TipoDeProductoDTO> kinds) {
         this.idProduct = idProduct;
         this.category = category;
         this.name = name;
@@ -39,6 +38,9 @@ public class ProductoDTO {
         this.codeImage = codeImage;
         this.brands = brands;
         this.kinds = kinds;
+    }
+
+    public ProductoDTO() {
     }
 
     public UUID getIdProduct() {
@@ -89,35 +91,35 @@ public class ProductoDTO {
         this.description = description;
     }
 
-    public byte[] getCodeImage() {
+    public String getCodeImage() {
         return codeImage;
     }
 
-    public void setCodeImage(byte[] codeImage) {
+    public void setCodeImage(String codeImage) {
         this.codeImage = codeImage;
     }
 
-    public List<MarcaDTO> getBrands() {
+    public Set<MarcaDTO> getBrands() {
         return brands;
     }
 
-    public void setBrands(List<MarcaDTO> brands) {
+    public void setBrands(Set<MarcaDTO> brands) {
         this.brands = brands;
     }
 
-    public List<TipoDeProductoDTO> getKinds() {
+    public Set<TipoDeProductoDTO> getKinds() {
         return kinds;
     }
 
-    public void setKinds(List<TipoDeProductoDTO> kinds) {
+    public void setKinds(Set<TipoDeProductoDTO> kinds) {
         this.kinds = kinds;
     }
 
     @Override
     public String toString() {
         return "ProductoDTO [idProduct=" + idProduct + ", category=" + category + ", name=" + name + ", price=" + price
-                + ", stock=" + stock + ", description=" + description + ", codeImage=" + Arrays.toString(codeImage)
-                + ", brands=" + brands + ", kinds=" + kinds + "]";
+                + ", stock=" + stock + ", description=" + description + ", codeImage=" + codeImage + ", brands="
+                + brands + ", kinds=" + kinds + "]";
     }
 
 }

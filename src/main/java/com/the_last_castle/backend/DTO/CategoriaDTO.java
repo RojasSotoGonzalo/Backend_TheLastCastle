@@ -1,4 +1,4 @@
-package com.TheLastCastle.Producto.Dto;
+package com.the_last_castle.backend.DTO;
 
 import java.util.UUID;
 

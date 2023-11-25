@@ -1,4 +1,4 @@
-package com.TheLastCastle.Producto.Dto.Reponse;
+package com.the_last_castle.backend.DTO.Reponse;
 
 public class ResponDTO {
     private String code;

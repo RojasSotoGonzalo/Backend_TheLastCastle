@@ -16,11 +16,12 @@ public class venta {
     @ManyToOne
     @JoinColumn(name = "Use_user_id_user", nullable = false)
     private user user;
-
-    @ManyToOne
-    @JoinColumn(name = "Product_id_product", nullable = false)
-    private Producto product;
-
+    /*
+     * @ManyToOne
+     * 
+     * @JoinColumn(name = "Product_id_product", nullable = false)
+     * private Producto product;
+     */
     @Column(name = "Sale_price", precision = 5, scale = 7)
     private BigDecimal salePrice;
 
