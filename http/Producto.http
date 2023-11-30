@@ -1,6 +1,7 @@
 ### Invocar al Servidor en mi maquina: LocalHost
 ### Inviar lista en generar
 GET http://localhost:8080/api/v1/producto 
+Content-Type: application/json
 ### Crea 
 POST  http://localhost:8080/api/v1/producto 
 Content-Type: application/json

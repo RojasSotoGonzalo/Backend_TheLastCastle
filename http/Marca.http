@@ -1,7 +1,7 @@
 ### Invocar al Servidor en mi maquina: LocalHost
 ### Inviar lista en generar
 GET http://localhost:8080/api/v1/marca  
-
+Content-Type: application/json
 ### Puede Ver  el contenido de  unico por id
 GET http://localhost:8080/api/v1/marca/938511ca-bb4a-4162-84a0-048fea89337e
 Content-Type: application/json

@@ -1,0 +1,33 @@
+### Invocar al Servidor en mi maquina: LocalHost
+### Inviar lista en generar
+GET http://localhost:8080/api/v1/promocion
+Content-Type: application/json
+### Crea 
+POST  http://localhost:8080/api/v1/promocion
+Content-Type: application/json
+
+{
+  "namePromotion": "Promocion de Año nuevo",
+  "startDate": "2023-12-01T00:00:00Z",
+  "endDate": "2023-12-31T23:59:59Z"
+}
+
+### Puede Ver  el contenido de  unico por id
+GET http://localhost:8080/api/v1/promocion/09181b33-cd03-477e-9818-77cae8a81722
+Content-Type: application/json
+
+
+
+### Editar 
+PUT  http://localhost:8080/api/v1/promocion/09181b33-cd03-477e-9818-77cae8a81722
+Content-Type: application/json
+
+{
+  "namePromotion": "Promoción de Navidad",
+  "startDate": "2023-12-01T00:00:00Z",
+  "endDate": "2023-12-31T23:59:59Z"
+}
+
+###Eliminar
+DELETE  http://localhost:8080/api/v1/promocion/7e018e91-ce85-44ed-aabf-3a529072627d
+Content-Type: application/json

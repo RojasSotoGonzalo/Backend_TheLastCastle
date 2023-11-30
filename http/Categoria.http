@@ -1,52 +1,13 @@
 ### Invocar al Servidor en mi maquina: LocalHost
 ### Inviar lista en generar
 GET http://localhost:8080/api/v1/categoria  
-
+Content-Type: application/json
 ### Crea 
 POST  http://localhost:8080/api/v1/categoria
 Content-Type: application/json
 
 {
-    "category": "Blu-ray/DVD"
-}
-### Crea 
-POST  http://localhost:8080/api/v1/categoria
-Content-Type: application/json
-
-{
-    "category": "Manga"
-}
-
-### Crea 
-POST  http://localhost:8080/api/v1/categoria
-Content-Type: application/json
-
-{
-    "category": "Figuras"
-}
-
-### Crea 
-POST  http://localhost:8080/api/v1/categoria
-Content-Type: application/json
-
-{
-    "category": "Coleccionables"
-}
-
-### Crea 
-POST  http://localhost:8080/api/v1/categoria
-Content-Type: application/json
-
-{
-    "category": "Ropa"
-}
-
-### Crea 
-POST  http://localhost:8080/api/v1/categoria
-Content-Type: application/json
-
-{
-    "category": "Accesorios"
+    "category": "Cajas sorpresa tematicas"
 }
 
 ### Crea 

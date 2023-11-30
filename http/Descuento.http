@@ -1,0 +1,38 @@
+### Invocar al Servidor en mi maquina: LocalHost
+### Inviar lista en generar
+GET http://localhost:8080/api/v1/descuento 
+Content-Type: application/json
+### Crea 
+POST  http://localhost:8080/api/v1/descuento
+Content-Type: application/json
+
+{
+   "discount": 0.50
+}
+### Crea 
+POST  http://localhost:8080/api/v1/descuento
+Content-Type: application/json
+
+{
+    "discount": 0.04
+}
+
+
+
+### Puede Ver  el contenido de  unico por id
+GET http://localhost:8080/api/v1/descuento/4e964b1b-40fc-4e4e-b4fb-da971c473bb5
+Content-Type: application/json
+
+
+
+### Editar 
+PUT  http://localhost:8080/api/v1/descuento/4e964b1b-40fc-4e4e-b4fb-da971c473bb5
+Content-Type: application/json
+
+{
+    "discount": 0.54
+}
+
+###Eliminar
+DELETE  http://localhost:8080/api/v1/descuento/e0291ecb-a5c5-4220-9fc6-dc74cb8f3629
+Content-Type: application/json
