@@ -2,6 +2,8 @@ package com.the_last_castle.backend.Entity;
 
 import java.util.*;
 
+import org.apache.catalina.User;
+
 import jakarta.persistence.*;
 
 @Entity
@@ -14,7 +16,7 @@ public class TarjetaDeCredito {
 
     @ManyToOne
     @JoinColumn(name = "user_id_user", nullable = false)
-    private user user;
+    private User user;
 
     @Column(name = "card_code")
     private int cardCode;

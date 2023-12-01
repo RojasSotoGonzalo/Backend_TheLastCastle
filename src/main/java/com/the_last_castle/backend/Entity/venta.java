@@ -3,6 +3,8 @@ package com.the_last_castle.backend.Entity;
 import java.math.BigDecimal;
 import java.util.*;
 
+import org.apache.catalina.User;
+
 import jakarta.persistence.*;
 
 @Entity
@@ -15,7 +17,7 @@ public class venta {
 
     @ManyToOne
     @JoinColumn(name = "Use_user_id_user", nullable = false)
-    private user user;
+    private User user;
     /*
      * @ManyToOne
      * 
