@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.the_last_castle.backend.DTO.PersonaDTO;
@@ -39,8 +40,8 @@ public class PersonaApi {
                 .orElseGet(() -> new ResponseEntity<>(HttpStatus.NOT_FOUND));
     }
 
-    @GetMapping("/buscar/{nombre}")
-    public ResponseEntity<List<PersonaDTO>> buscarPorNombre(@PathVariable String nombre) {
+    @GetMapping("/buscar")
+    public ResponseEntity<List<PersonaDTO>> buscarPorNombre(@RequestParam String nombre) {
         List<PersonaDTO> personas = personaService.buscarPorNombre(nombre);
         if (!personas.isEmpty()) {
             return new ResponseEntity<>(personas, HttpStatus.OK);

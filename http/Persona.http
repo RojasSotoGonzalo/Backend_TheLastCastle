@@ -18,12 +18,16 @@ POST  http://localhost:8080/api/v1/persona
 Content-Type: application/json
 
 {
-    "peopleName": "Juan", 
+    "peopleName": "Juan per", 
     "surnames": "Perez", 
-    "carnet": "1234435789", 
+    "carnet": "123423435789", 
     "phone": "555-1434", 
     "address": "123 Plation Rt"
 }
+###Busqueda
+GET http://localhost:8080/api/v1/persona/buscar?nombre=Juan per
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2huLmRvZSIsImlhdCI6MTcwMTQ0NDIwMCwiZXhwIjoxNzAxNTMwNjAwfQ.2D__w4TytufzOHC3JJN0C7FEUURyOqO43hJ4i9ibPsA
 
 
 ### Puede Ver  el contenido de  unico por id
@@ -33,13 +37,17 @@ Content-Type: application/json
 
 
 ### Editar 
-PUT  http://localhost:8080/api/v1/descuento/4e964b1b-40fc-4e4e-b4fb-da971c473bb5
+PUT  http://localhost:8080/api/v1/persona/4e964b1b-40fc-4e4e-b4fb-da971c473bb5
 Content-Type: application/json
 
 {
-    "discount": 0.54
+    "peopleName": "Juan per", 
+    "surnames": "Perez", 
+    "carnet": "123423435789", 
+    "phone": "555-1434", 
+    "address": "123 Plation Rt"
 }
 
 ###Eliminar
-DELETE  http://localhost:8080/api/v1/descuento/49fb0aaa-6496-4d21-a047-281dfc08849d
+DELETE  http://localhost:8080/api/v1/persona/49fb0aaa-6496-4d21-a047-281dfc08849d
 Content-Type: application/json

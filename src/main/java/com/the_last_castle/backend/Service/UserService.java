@@ -127,4 +127,9 @@ public class UserService {
     private RolesDTO convertirRolesEntidadADTO(RolesEntity entidad) {
         return new RolesDTO(entidad.getIdRoles(), entidad.getRoles());
     }
+
+    public List<UserDTO> getUsersByName(String peopleName) {
+        List<UserEntity> userEntities = userRepository.findByPersonaPeopleNameContainingIgnoreCase(peopleName);
+        return convertirUsersEntidadesADTO(userEntities);
+    }
 }

@@ -45,6 +45,7 @@ public class SecurityConfig {
                     auth.requestMatchers("/api/v1/categoria").permitAll();
                     auth.requestMatchers("/api/v1/promocion").permitAll();
                     auth.requestMatchers("/api/v1/persona").permitAll();
+                    auth.requestMatchers("/api/v1/persona/buscar").permitAll();
                     auth.requestMatchers("/api/v1/user").permitAll();
                     auth.requestMatchers("/api/v1/rol").permitAll();
                     auth.anyRequest().authenticated();

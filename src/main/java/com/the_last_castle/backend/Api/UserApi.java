@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.the_last_castle.backend.DTO.PersonaDTO;
@@ -92,5 +93,11 @@ public class UserApi {
 
     private RolesDTO convertirRolesEntidadADTO(RolesEntity entidad) {
         return new RolesDTO(entidad.getIdRoles(), entidad.getRoles());
+    }
+
+    @GetMapping("/busqueda")
+    public ResponseEntity<List<UserDTO>> searchUsersByName(@RequestParam String name) {
+        List<UserDTO> usersDTO = userService.getUsersByName(name);
+        return new ResponseEntity<>(usersDTO, HttpStatus.OK);
     }
 }

@@ -10,25 +10,26 @@ Content-Type: application/json
 {
   "idUser": "c4560c3d-fcf6-4c40-a04f-17c2b8c87d59",
   "persona": {
-    "id": "6826009d-f321-4468-8404-9b062e40a8a0"
+    "id": "9c683feb-426d-4c3b-806d-88b7ec457a57"
   },
   "roles": [
     {
       "idRoles": "463a8850-d5ad-4cc4-ae49-c834a68d1f87"
     }
   ],
-  "loginUser": "john.doe",
-  "passwordUser": "password123",
-  "email": "john.doe@example.com"
+  "loginUser": "juan",
+  "passwordUser": "12345",
+  "email": "juan@example.com"
 }
 ###Login
 POST http://localhost:8080/login
 Content-Type: application/json
 
 {
-  "loginUser": "john.doe",
-  "passwordUser": "password123"
+  "loginUser": "juan",
+  "passwordUser": "12345"
 }
-###Login
-GET http://localhost:8080/api/v1/user
+###busqueda
+GET http://localhost:8080/api/v1/user/busqueda?name=juan
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2huLmRvZSIsImlhdCI6MTcwMTQ0NDIwMCwiZXhwIjoxNzAxNTMwNjAwfQ.2D__w4TytufzOHC3JJN0C7FEUURyOqO43hJ4i9ibPsA
