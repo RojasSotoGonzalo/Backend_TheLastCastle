@@ -2,6 +2,7 @@
 ### Inviar lista en generar
 GET http://localhost:8080/api/v1/descuento 
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2huLmRvZSIsImlhdCI6MTcwMTQ0NDIwMCwiZXhwIjoxNzAxNTMwNjAwfQ.2D__w4TytufzOHC3JJN0C7FEUURyOqO43hJ4i9ibPsA
 ### Crea 
 POST  http://localhost:8080/api/v1/descuento
 Content-Type: application/json

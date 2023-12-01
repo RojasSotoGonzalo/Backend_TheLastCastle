@@ -7,7 +7,8 @@ import java.util.UUID;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
-
+import org.springframework.stereotype.Service;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import com.the_last_castle.backend.DTO.PersonaDTO;
 import com.the_last_castle.backend.DTO.RolesDTO;
 import com.the_last_castle.backend.DTO.UserDTO;
@@ -20,7 +21,14 @@ import com.the_last_castle.backend.Repository.UserRepository;
 
 import jakarta.persistence.EntityNotFoundException;
 
+@Service
 public class UserService {
+    private final PasswordEncoder passwordEncoder;
+
+    public UserService(PasswordEncoder passwordEncoder) {
+        this.passwordEncoder = passwordEncoder;
+    }
+
     @Autowired
     private UserRepository userRepository;
 
@@ -35,12 +43,14 @@ public class UserService {
         PersonaEntity personaEntity = personaRepository.findById(userDTO.getPersona().getId())
                 .orElseThrow(() -> new EntityNotFoundException("Persona not found"));
         Set<RolesEntity> rolesEntities = fetchRolesEntities(userDTO.getRoles());
-
+        // Codificar la contraseña antes de asignarla al nuevo usuario
+        String encodedPassword = passwordEncoder.encode(userDTO.getPasswordUser());
+        System.err.println(encodedPassword);
         UserEntity newUser = new UserEntity(
                 personaEntity,
                 rolesEntities,
                 userDTO.getLoginUser(),
-                userDTO.getPasswordUser(),
+                encodedPassword,
                 userDTO.getEmail());
 
         // Save the new user

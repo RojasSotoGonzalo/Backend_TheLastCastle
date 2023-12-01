@@ -3,6 +3,8 @@ package com.the_last_castle.backend.Entity;
 import java.util.Set;
 import java.util.UUID;
 
+import com.the_last_castle.backend.DTO.UserDTO;
+
 import jakarta.persistence.*;
 
 @Entity
@@ -25,7 +27,7 @@ public class UserEntity {
     @Column(name = "login_user", length = 50)
     private String loginUser;
 
-    @Column(name = "password_user", length = 50)
+    @Column(name = "password_user", length = 250)
     private String passwordUser;
 
     @Column(name = "email", length = 50)
@@ -105,6 +107,10 @@ public class UserEntity {
     public String toString() {
         return "UserEntity [idUser=" + idUser + ", persona=" + persona + ", roles=" + roles + ", loginUser=" + loginUser
                 + ", passwordUser=" + passwordUser + ", email=" + email + "]";
+    }
+
+    public static UserDTO builder() {
+        return null;
     }
 
 }

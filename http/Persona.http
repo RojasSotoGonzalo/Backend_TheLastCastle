@@ -1,22 +1,29 @@
 ### Invocar al Servidor en mi maquina: LocalHost
 ### Inviar lista en generar
-GET http://localhost:8080/api/v1/descuento 
+GET http://localhost:8080/api/v1/persona
 Content-Type: application/json
 ### Crea 
-POST  http://localhost:8080/api/v1/descuento
+POST  http://localhost:8080/api/v1/persona
 Content-Type: application/json
 
 {
-   "discount": 0.70
+    "peopleName": "John", 
+    "surnames": "Doe", 
+    "carnet": "123456789", 
+    "phone": "555-1234", 
+    "address": "123 Main St"
 }
 ### Crea 
-POST  http://localhost:8080/api/v1/descuento
+POST  http://localhost:8080/api/v1/persona
 Content-Type: application/json
 
 {
-    "discount": 0.04
+    "peopleName": "Juan", 
+    "surnames": "Perez", 
+    "carnet": "1234435789", 
+    "phone": "555-1434", 
+    "address": "123 Plation Rt"
 }
-
 
 
 ### Puede Ver  el contenido de  unico por id
