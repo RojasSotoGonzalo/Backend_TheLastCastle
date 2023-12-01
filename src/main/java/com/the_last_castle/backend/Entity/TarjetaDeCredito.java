@@ -2,21 +2,19 @@ package com.the_last_castle.backend.Entity;
 
 import java.util.*;
 
-import org.apache.catalina.User;
-
 import jakarta.persistence.*;
 
 @Entity
 @Table(name = "Use_credit_card")
 public class TarjetaDeCredito {
     @Id
-    @GeneratedValue(generator = "uuid2")
-    @Column(name = "idcredit_card", unique = true, nullable = false, columnDefinition = "BINARY(16)")
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id_credit_card", columnDefinition = "uuid", updatable = false, nullable = false)
     private UUID idCreditCard;
 
     @ManyToOne
-    @JoinColumn(name = "user_id_user", nullable = false)
-    private User user;
+    @JoinColumn(name = "user_id", nullable = false) // Corregido el nombre de la columna
+    private UserEntity user;
 
     @Column(name = "card_code")
     private int cardCode;
